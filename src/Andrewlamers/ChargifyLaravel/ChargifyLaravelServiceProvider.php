@@ -20,7 +20,7 @@ class ChargifyLaravelServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('andrewlamers/chargify-laravel', 'chargifylaravel');
+		$this->package('andrewlamers/chargify-laravel');
 	}
 
 	/**
@@ -33,7 +33,7 @@ class ChargifyLaravelServiceProvider extends ServiceProvider {
 
 		$this->app->bind('chargify', function () {
 
-			$chargify = new Chargify(Config::get('chargfiylaravel::chargify'));
+			$chargify = new Chargify(Config::get('chargify-laravel::config'));
 
 			return $chargify;
 
