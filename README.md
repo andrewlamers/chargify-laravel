@@ -36,7 +36,7 @@ How to Install
     $ php artisan config:publish andrewlamers/chargify-laravel
     ```
 
-1.  Update `app/config/packages/andrewlamers/chargify-laravel/chargify.php` with your chargify API Information
+1.  Update `app/config/packages/andrewlamers/chargify-laravel/config.php` with your chargify API Information
 
     ```php
     return array(
