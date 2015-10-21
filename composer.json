@@ -1,0 +1,21 @@
+{
+    "name": "andrewlamers/chargify-laravel",
+    "description": "",
+    "authors": [
+        {
+            "name": "Andrew Lamers",
+            "email": "andrew.lamers@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "chargely/chargify-sdk-php": "0.0.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Andrewlamers\\ChargifyLaravel\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
