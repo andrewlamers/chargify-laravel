@@ -6,48 +6,52 @@ use Config;
 
 class ChargifyLaravelServiceProvider extends ServiceProvider {
 
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = false;
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = false;
 
-	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->package('andrewlamers/chargify-laravel');
-	}
+    /**
+     * Bootstrap the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->publishes(array(
+            __DIR__.'/chargify.php' => config_path('chargify.php')
+        ), 'config');
 
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
+        $this->mergeConfigFrom(__DIR__.'/chargify.php', 'chargify');
+    }
 
-		$this->app->bind('chargify', function () {
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
 
-			$chargify = new Chargify(Config::get('chargify-laravel::config'));
+        $this->app->bind('chargify', function ($app) {
 
-			return $chargify;
+            $chargify = new Chargify(config('chargify'));
 
-		});
-	}
+            return $chargify;
 
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return array('chargify');
-	}
+        });
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return array('chargify');
+    }
 
 }
