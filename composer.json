@@ -13,7 +13,7 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.*|5.*",
-        "chargely/chargify-sdk-php": "0.0.3"
+        "chargely/chargify-sdk-php": "dev-master"
     },
     "repositories": [
       {
