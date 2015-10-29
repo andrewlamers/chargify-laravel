@@ -10,17 +10,17 @@
             "email": "andrew.lamers@gmail.com"
         }
     ],
-    "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.*|5.*",
-        "chargely/chargify-sdk-php": "dev-guzzle"
-    },
     "repositories": [
       {
         "type": "vcs",
         "url": "https://github.com/andrewlamers/chargify-sdk-php"
       }
     ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.*|5.*",
+        "chargely/chargify-sdk-php": "dev-guzzle"
+    },
     "autoload": {
         "psr-0": {
             "Andrewlamers\\ChargifyLaravel\\": "src/"
