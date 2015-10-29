@@ -13,7 +13,7 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.*|5.*",
-        "chargely/chargify-sdk-php": "dev-master"
+        "chargely/chargify-sdk-php": "dev-master as 0.0.3"
     },
     "repositories": [
       {
@@ -26,5 +26,5 @@
             "Andrewlamers\\ChargifyLaravel\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
