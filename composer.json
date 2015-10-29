@@ -15,6 +15,12 @@
         "illuminate/support": "4.*|5.*",
         "chargely/chargify-sdk-php": "0.0.3"
     },
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/andrewlamers/chargify-sdk-php"
+      }
+    ],
     "autoload": {
         "psr-0": {
             "Andrewlamers\\ChargifyLaravel\\": "src/"
